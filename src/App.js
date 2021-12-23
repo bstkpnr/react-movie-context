@@ -1,12 +1,10 @@
 import React from 'react';
+import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
-    <div>
- <h1 className="text-3xl font-bold underline text-red-700">
-      Hello world!
-    </h1>
-    </div>
+    <Navbar />
   );
 }
 
