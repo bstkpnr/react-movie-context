@@ -5,16 +5,14 @@ const MoviesContext = createContext();
 
 const MoviesProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
-  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     axios
       .get("https://imdb-api.com/en/API/MostPopularMovies/k_9jopu1jg")
       .then((response) => setMovies(response.data.items))
       .catch((error) => alert(error))
-      .finally(() => setLoading(false));
   }, []);
 
-  const values = { movies, isLoading };
+  const values = { movies };
 
   return (
     <MoviesContext.Provider value={values}>{children}</MoviesContext.Provider>
