@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMovies } from "../../Context/ContextMovie";
-import Loading from "../Loading/Loading";
+import {BsSearch} from 'react-icons/bs'
 import Navbar from "../Navbar/Navbar";
 
 export default function Movies() {
@@ -11,7 +11,20 @@ export default function Movies() {
   return (
     <>
     <Navbar />
+    <div className=" bg-gray-100 py-6 flex  justify-center">
+        <input
+            type="text"
+            className="px-4 py-2  rounded-md"
+            placeholder="Search..."
+          />
+          <button className="px-4 text-green-700 bg-gray-400 border-l m-1 font-sans rounded-md font-medium hover: focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" >
+            <BsSearch />
+          </button>
+         
+        </div>
       <div className="min-h-screen bg-gray-100 py-6 grid grid-cols-4 gap-4 flex  justify-center sm:py-12">
+    
+     
         {movies.map((data) => (
           <div className="relative py-3 p-4  ">
             <div className="relative px-4 py-5 bg-gray-200 shadow-lg sm:rounded-3xl">
