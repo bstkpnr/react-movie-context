@@ -6,6 +6,9 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Movies() {
   const { movies } = useMovies();
+
+
+ 
  
 
   return (
@@ -16,13 +19,14 @@ export default function Movies() {
             type="text"
             className="px-4 py-2  rounded-md"
             placeholder="Search..."
+          
           />
           <button className="px-4 text-green-700 bg-gray-400 border-l m-1 font-sans rounded-md font-medium hover: focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" >
             <BsSearch />
           </button>
          
         </div>
-      <div className="min-h-screen bg-gray-100 py-6 grid grid-cols-4 gap-4 flex  justify-center sm:py-12">
+      <div className="min-h-screen bg-gray-100 py-6 grid grid-cols-4 gap-4 flex  justify-center md:py-10 ">
     
      
         {movies.map((data) => (
