@@ -7,10 +7,6 @@ import Navbar from "../Navbar/Navbar";
 export default function Movies() {
   const { movies } = useMovies();
 
-
- 
- 
-
   return (
     <>
     <Navbar />
@@ -57,8 +53,6 @@ export default function Movies() {
                   <p className=" text-black-400 hover:text-white font-medium text-bold">
               
                        <Link to={`/${data.id}` } >Go To The Film's Page &rarr;</Link>
-                  
-                   
                   </p>
                 </div>
               </div>
